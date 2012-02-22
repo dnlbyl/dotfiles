@@ -1,0 +1,37 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/donal/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+autoload -U promptinit && promptinit
+prompt walters
+
+# ALIASES
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+alias ll="ls -l"
+alias lh="ls -lh"
+alias ls='ls -hF'  # add colors for filetype recognition
+alias la='ls -Al'          # show hidden files
+
+
+# Completions
+fpath=(~/.zsh-completions/zsh-completions $fpath)
+
+# Set title
+case $TERM in
+   xterm*)
+      precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+      ;;
+esac

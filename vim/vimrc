@@ -1,0 +1,6 @@
+set nocompatible
+set autoindent
+set smartindent
+colorscheme murphy
+set number
+
