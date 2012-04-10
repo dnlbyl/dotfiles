@@ -20,9 +20,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
 
+alias ls='ls -hF --color=auto'  # add colors for filetype recognition
 alias ll="ls -l"
 alias lh="ls -lh"
-alias ls='ls -hF'  # add colors for filetype recognition
 alias la='ls -Al'          # show hidden files
 
 
